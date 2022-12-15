@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://morgan-elder.github.io/Detailed_Designs_2/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Detailed Designs - TheTour</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Detailed Designs";
+        var mkdocs_page_input_path = "Detailed_Designs_2.md";
+        var mkdocs_page_url = "/Detailed_Designs_2/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> TheTour
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../highleveldesign/">High Level Design</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Detailed Designs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#main-menu">Main Menu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#player-controls">Player controls</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#loadcsv">LoadCSV</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#locationlist">LocationList</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#siteinfo">SiteInfo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pausemenu">PauseMenu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#audiomanager">AudioManager</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#waypoint">Waypoint</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transversemercator">TransverseMercator</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#poi-data">POI Data</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Programmer's Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../programmerguide/Assumptions/">Assumptions About the Programmer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../programmerguide/InstallationInstructions/">Installation Instructions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../programmerguide/Make_a_Map_in_Blender/">Make a Map in Blender</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">TheTour</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Detailed Designs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="detailed-designs">Detailed Designs</h1>
+<h2 id="main-menu">Main Menu</h2>
+<p>Press UI buttons:
+    Play -&gt; switch to game scene
+    Controls -&gt; show controls
+    Credits -&gt; show credits
+    Quit -&gt; close game app</p>
+<h2 id="player-controls">Player controls</h2>
+<p>Active while in-game
+First-person camera
+Inputs:
+    WASD -&gt; walk
+    Move mouse -&gt; look around
+    Escape -&gt; pause, open pause menu
+    E -&gt; pause, open location list
+    Left click -&gt; raycast check
+Raycast check:
+    Check if a waypoint is in front of the player
+    If so -&gt; pause, open site info screen</p>
+<h2 id="loadcsv">LoadCSV</h2>
+<p>Run on game scene load
+Use CSV file set in the Unity editor
+Reads and parses the CSV file
+    Makes instance of POI data class
+For each row in the file, create a cylinder:
+    Set position, translating from real-world coordinates
+        Using TransverseMercator class
+    Give POI data from CSV table
+    Set shader material to glow effect
+    Give it a waypoint marker
+    Place in game world
+Set static lists of POIs in LocationListController and LocationListMainView</p>
+<h2 id="locationlist">LocationList</h2>
+<p>Stores which POIs have been visited in static array
+Show scrollable list of all POIs
+Visited ones are greyed out
+Show completion percent
+How many POIs have been visited
+On press escape or e -&gt; unpause, close UI</p>
+<h2 id="siteinfo">SiteInfo</h2>
+<p>Shows info on current POI
+    Name
+    Description
+    Picture
+On press “Done” button, escape key -&gt; unpause, close UI</p>
+<h2 id="pausemenu">PauseMenu</h2>
+<p>On press menu button:
+    Resume -&gt; unpause, resume game
+    Quit -&gt; close game app</p>
+<h2 id="audiomanager">AudioManager</h2>
+<p>Plays music during game
+Initialized on main menu opening</p>
+<h2 id="waypoint">Waypoint</h2>
+<p>Waypoint marker
+Visible if:
+    In player’s field of view,
+    and less than 500 meters away
+Same scale on screen, regardless of distance from player
+Displays current distance from player
+    In meters
+Appears in front of obstacles
+Disappears when POI is visited</p>
+<h2 id="transversemercator">TransverseMercator</h2>
+<p>Converts from real-world geographic coordinates to in-game units
+Accounts for curvature of the Earth in latitude/longitude</p>
+<h2 id="poi-data">POI Data</h2>
+<p>Class that stores POI data
+Stores:
+    Integer ID
+    Latitude/longitude
+    In-world position
+    Name
+    Position
+    Description
+    Image texture
+Initialized using row data and map center from LoadCSV</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../highleveldesign/" class="btn btn-neutral float-left" title="High Level Design"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../programmerguide/Assumptions/" class="btn btn-neutral float-right" title="Assumptions About the Programmer">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../highleveldesign/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../programmerguide/Assumptions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

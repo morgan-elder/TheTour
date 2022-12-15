@@ -44,24 +44,22 @@
                 <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../highleveldesign/">High Level Design</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Detailed_Designs_2/">Detailed Designs</a>
+                </li>
+              </ul>
               <p class="caption"><span class="caption-text">Programmer's Guide</span></p>
               <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Assumptions/">Assumptions About the Programmer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../InstallationInstructions/">Installation Instructions</a>
+                  </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Make a Map in Blender</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#instructions">Instructions</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#downloading-blender-osm">Downloading Blender-OSM</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#installing-blender-osm-in-blender">Installing Blender-OSM in Blender</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#sources">Sources</a>
-    </li>
     </ul>
                   </li>
               </ul>
@@ -89,11 +87,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="make-a-map-in-blender">Make a Map in Blender</h1>
-<p>Contributed by Morgan Elder </p>
+                <p>Contributed by Morgan Elder </p>
 <h2 id="description">Description</h2>
-<p>This guide describes the download, installation, and usage of Blender-OSM in Blender. 
-Blender is free and open-source software for creating </p>
+<p>This guide describes the download, installation, and usage of Blender-OSM in Blender. Blender is a free and open-source software for creating 3D graphics. OpenStreetMaps (OSM) is a crowd-sourced project collecting and distributing free greographic information. </p>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>Download and install <a href="https://www.blender.org/download/">Blender</a><ul>
@@ -168,9 +164,82 @@ Blender is free and open-source software for creating </p>
 </ul>
 </li>
 <li>
-<p>Select a directory to store the </p>
+<p>Under Preferences of Blender-OSM, select a directory to store the OSM data</p>
+<ul>
+<li>For example. create a new folder called BlenderCities (no spaces) in the Documents folder</li>
+</ul>
 </li>
 </ul>
+<h3 id="importing-osm-data">Importing OSM Data</h3>
+<ul>
+<li>To open OSM addon, press the N key and select the OSM tab</li>
+</ul>
+<p><img alt="" src="../../images/OSMTab.gif" /></p>
+<ul>
+<li>Enter the following values in the max lat, min lat, max lon, and min lon boxes<ul>
+<li>These values represents the area of St. Louis used in this project</li>
+<li>To use a different extent, press "select"<ul>
+<li>Zoom into the area of interest and select "Show selction rectangle"</li>
+<li>Resize the of the rectangle and then press copy</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../../images/MinMaxCoords.png" /></p>
+<ul>
+<li>In the dropdown menu, select Terrain and click import</li>
+</ul>
+<p><img alt="" src="../../images/ImportTerain.gif" /></p>
+<ul>
+<li>In the view tab, set the end value to 10000 m<ul>
+<li>This makes the terrain more noticable</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../../images/EndClip.gif" /></p>
+<ul>
+<li>To import an overlay, select image overlay in the dropdown next to the import button <ul>
+<li>For Overlay, select OSM Mapnik</li>
+<li>Selected the textured view in viewport shading</li>
+<li>Click import</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../../images/ImportOverlay.gif" /></p>
+<ul>
+<li>Save the overlay as a png<ul>
+<li>Split the window</li>
+<li>Switch to UV editor</li>
+<li>Select olverlay</li>
+<li>Under Image, select Save As to store as a png to the computer</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../../images/SaveOverlay.gif" /></p>
+<ul>
+<li>In the dropdown menu, select OpenStreetMaps<ul>
+<li>Check the boxes for <ul>
+<li>Import buildings</li>
+<li>and Import roads and paths</li>
+</ul>
+</li>
+<li>Click Import</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../../images/ImportBuildingsAndRoads.gif" /></p>
+<ul>
+<li>Export the map<ul>
+<li>Click File</li>
+<li>Under Export, select FBX</li>
+<li>Limit the export to the Active Collection</li>
+<li>Select a place on the filesystem and filename</li>
+<li>Click Export</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../../images/ExportMap.gif" /></p>
 <h2 id="sources">Sources</h2>
 <p>These resources used to create these instructions are free and publicly available.</p>
 <p>" Create any City in Blender in 20 Minutes" - CG Geek on <a href="https://www.youtube.com/watch?v=NW_djQS_N8U&amp;ab_channel=CGGeek">YouTube</a></p>
@@ -178,7 +247,7 @@ Blender is free and open-source software for creating </p>
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../InstallationInstructions/" class="btn btn-neutral float-left" title="Installation Instructions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -201,7 +270,7 @@ Blender is free and open-source software for creating </p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../InstallationInstructions/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
   </span>

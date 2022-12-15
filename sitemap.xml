@@ -2,17 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://morgan-elder.github.io/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2022-12-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://morgan-elder.github.io/Detailed_Designs_2/</loc>
+         <lastmod>2022-12-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://morgan-elder.github.io/about/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2022-12-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://morgan-elder.github.io/highleveldesign/</loc>
+         <lastmod>2022-12-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://morgan-elder.github.io/programmerguide/Assumptions/</loc>
+         <lastmod>2022-12-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://morgan-elder.github.io/programmerguide/InstallationInstructions/</loc>
+         <lastmod>2022-12-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://morgan-elder.github.io/programmerguide/Make_a_Map_in_Blender/</loc>
-         <lastmod>2022-12-12</lastmod>
+         <lastmod>2022-12-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
