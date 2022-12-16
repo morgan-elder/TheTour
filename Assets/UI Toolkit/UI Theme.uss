@@ -1,0 +1,69 @@
+#Background {
+    background-color: rgb(60, 60, 60);
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#HeaderRow > * {
+    -unity-font-style: bold;
+    color: rgb(195, 195, 195);
+    padding-left: 8px;
+    padding-right: 4px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    -unity-text-align: upper-center;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(194, 194, 194);
+    border-right-color: rgb(194, 194, 194);
+    border-top-color: rgb(194, 194, 194);
+    border-bottom-color: rgb(194, 194, 194);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#LocationListEntry {
+    -unity-text-align: upper-center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.loc-new {
+    background-color: rgb(66, 81, 135);
+    color: rgb(222, 222, 222);
+}
+
+.loc-new:hover {
+    background-color: rgb(89, 107, 171);
+    color: rgb(255, 255, 255);
+}
+
+.loc-done {
+    color: rgb(171, 171, 171);
+    -unity-paragraph-spacing: 1px;
+    -unity-font-style: italic;
+    background-color: rgb(60, 60, 60);
+}
+
+#CloseButton {
+    background-color: rgb(85, 85, 85);
+    color: rgb(238, 238, 238);
+}
+
+#CloseButton:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(114, 114, 114);
+}

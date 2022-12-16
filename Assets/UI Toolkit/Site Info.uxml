@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UI%20Theme.uss?fileID=7433441132597879392&amp;guid=df16f2bfcdc8457468faa2bb4f4fc196&amp;type=3#UI Theme" />
+    <ui:VisualElement name="Background" style="flex-grow: 1; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 8px; color: rgb(210, 210, 210);">
+        <ui:Label text="Site Title" display-tooltip-when-elided="true" name="SiteTitle" style="-unity-font-style: bold; font-size: 16px; -unity-text-align: middle-center;" />
+        <ui:VisualElement name="HFlow" style="flex-direction: row; flex-grow: 4; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 8px;">
+            <ui:VisualElement name="SiteImage" style="background-image: url(&apos;project://database/Assets/map/overlay.png?fileID=2800000&amp;guid=b04bd287ac02d9549a45b0e1fef82458&amp;type=3#overlay&apos;); -unity-background-scale-mode: scale-to-fit; min-height: 150px; height: 100px; width: 100px; min-width: 150px; flex-grow: 3; margin-left: 16px;" />
+            <ui:Label text="Site Description&#10;&#10;&#10;&#10;&#10;&#10;" display-tooltip-when-elided="true" name="SiteDescription" style="flex-grow: 2; flex-shrink: 1; margin-right: 0; margin-left: 16px; color: rgba(168, 168, 168, 255); white-space: normal;" />
+        </ui:VisualElement>
+        <ui:Button text="Done" display-tooltip-when-elided="true" name="CloseButton" style="margin-left: 64px; margin-right: 64px; flex-grow: 1; margin-bottom: 16px; margin-top: 16px;" />
+    </ui:VisualElement>
+</ui:UXML>

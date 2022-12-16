@@ -1,8 +1,0 @@
-site_name: TheTour
-site_url: https://morgan-elder.github.io
-nav:
-  - Home: index.md
-  - Programmer's Guide: 
-    - Make a Map in Blender: "./programmerguide/Make_a_Map_in_Blender.md"
-
-theme: readthedocs
