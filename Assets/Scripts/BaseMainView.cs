@@ -5,13 +5,13 @@ public class BaseMainView : MonoBehaviour
 {
     protected UIDocument uiDocument;
 
-    protected void Start()
+    protected virtual void Start()
     {
         uiDocument = GetComponent<UIDocument>();
         uiDocument.enabled = false;
     }
 
-    protected void Update()
+    protected virtual void Update()
     {
         // Close when pressing escape
         if(uiDocument.enabled && Input.GetKeyDown(KeyCode.Escape))

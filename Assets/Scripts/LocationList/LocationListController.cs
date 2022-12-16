@@ -44,11 +44,12 @@ public class LocationListController
 
         m_LocationList.bindItem = (item, index) =>
         {
-            var poi = allPOIs[index];
+            POI poi = allPOIs[index];
 
             (item.userData as LocationListEntryController).
                 SetLocationData(poi);
 
+            item.ClearClassList();
             item.AddToClassList(
                 LocationListMainView.visistedPOIs[poi] ?
                 "loc-done" : "loc-new"

@@ -7,7 +7,7 @@ class SiteInfoMainView : BaseMainView
     private POI poi;
     private Camera cam;
 
-    void Start()
+    protected override void Start()
     {
         base.Start();
         cam = Camera.main;

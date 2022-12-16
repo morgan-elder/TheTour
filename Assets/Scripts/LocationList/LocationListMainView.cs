@@ -14,7 +14,7 @@ public class LocationListMainView : BaseMainView
         visistedPOIs = new Dictionary<POI, bool>();
     }
 
-    void Update()
+    protected override void Update()
     {
         base.Update();
 
